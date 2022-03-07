@@ -1,0 +1,31 @@
+<table mat-table class="tabela" [dataSource]="clientes">
+
+<!-- coluna id -->
+<ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let clientes"> {{ clientes.id }} </td>
+</ng-container>
+
+<!-- coluna name -->
+<ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let clientes"> {{ clientes.name }} </td>
+</ng-container>
+
+<!-- coluna cell -->
+<ng-container matColumnDef="cell">
+    <th mat-header-cell *matHeaderCellDef> Telefone </th>
+    <td mat-cell *matCellDef="let clientes"> {{ clientes.cell }} </td>
+</ng-container>
+
+<!-- coluna address -->
+<ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> Endereço </th>
+    <td mat-cell *matCellDef="let clientes"> {{ clientes.address }} </td>
+</ng-container>
+
+
+<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+<tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+</table>
