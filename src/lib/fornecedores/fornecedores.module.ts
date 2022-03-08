@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FornecedoresComponent } from './fornecedores.component';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -10,6 +11,7 @@ import { FornecedoresComponent } from './fornecedores.component';
   ],
   imports: [
     CommonModule,
+    MatTableModule,
   ],
 
   exports: [

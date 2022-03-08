@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CLIENTES } from './clientesArray';
+import { CLIENTES } from './clientes';
 
 @Component({
   selector: 'app-clientes',
