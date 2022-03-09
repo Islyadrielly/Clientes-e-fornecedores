@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FORNECEDORES } from './fornecedores';
+import { CLIENTES } from '../clientes/clientes';
 
 @Component({
   selector: 'app-fornecedores',
@@ -10,7 +11,7 @@ export class FornecedoresComponent implements OnInit {
 
   fornecedores = FORNECEDORES;
 
-  columnsToDisplay = ['id']
+  columnsToDisplay = ['id', 'name', 'cell', 'address'];
 
   constructor() { }
 

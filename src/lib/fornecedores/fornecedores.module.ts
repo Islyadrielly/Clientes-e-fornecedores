@@ -7,7 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
-    FornecedoresComponent
+    FornecedoresComponent,
   ],
   imports: [
     CommonModule,
