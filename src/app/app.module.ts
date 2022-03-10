@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientesModule } from 'src/lib/clientes/clientes.module';
 import { FornecedoresModule } from 'src/lib/fornecedores/fornecedores.module';
 
-
 @NgModule({
   declarations: [
     AppComponent

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FORNECEDORES } from './fornecedores';
-import { CLIENTES } from '../clientes/clientes';
 
 @Component({
   selector: 'app-fornecedores',
