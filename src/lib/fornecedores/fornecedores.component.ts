@@ -26,7 +26,7 @@ export class FornecedoresComponent implements OnInit {
   }
 
   deleteFornecedor(fornecedor: Fornecedor): void {
-    this.fornecedores = this.fornecedores.filter(c => c !== fornecedor)
+    this.fornecedores = this.fornecedores.filter(f => f !== fornecedor)
     this.fornecedoresService.deleteFornecedor(fornecedor.id).subscribe();
   }
 

@@ -23,7 +23,7 @@ export class ClientesComponent implements OnInit {
 
   getClientes(): void {
   this.clientesService.getClientes()
-    .subscribe(clientes => this.clientes = clientes);
+    .subscribe((clientes) => this.clientes = clientes);
   } 
 
   deleteCliente(cliente: Cliente): void {

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FornecedoresComponent } from './fornecedores.component';
 import { MatTableModule } from '@angular/material/table';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from '../../app/in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MatButtonModule } from '@angular/material/button';

@@ -3,4 +3,5 @@ export interface Cliente {
     name: string;
     cell: number;
     address: string;
+    type: string;
   }

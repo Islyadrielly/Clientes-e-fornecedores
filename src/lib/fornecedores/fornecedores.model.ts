@@ -3,4 +3,5 @@ export interface Fornecedor {
     name: string;
     cell: number;
     address: string;
+    type: string;
 }
