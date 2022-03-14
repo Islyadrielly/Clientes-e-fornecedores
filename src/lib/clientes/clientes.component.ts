@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from './clientes.model';
 import { ClientesService } from './clientes.service';
 
+
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
