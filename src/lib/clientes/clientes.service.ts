@@ -28,7 +28,6 @@ export class ClientesService {
   deleteCliente(id: number): Observable<Cliente> {
     const url = `${this.clientesUrl}/${id}`
     return this.http.delete<Cliente>(url);
-    // return this.http.delete<Cliente.id>(url, this.clientesUrl)
   }
 
 }

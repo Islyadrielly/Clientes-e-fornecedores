@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FORNECEDORES } from './fornecedores';
+import { Fornecedor } from './fornecedores.model';
+import { FornecedoresService } from './fornecedores.service';
+
 
 @Component({
   selector: 'app-fornecedores',
@@ -8,13 +10,24 @@ import { FORNECEDORES } from './fornecedores';
 })
 export class FornecedoresComponent implements OnInit {
 
-  fornecedores = FORNECEDORES;
+  fornecedores: Fornecedor[] = [];
 
-  columnsToDisplay = ['id', 'name', 'cell', 'address'];
+  columnsToDisplay = ['id', 'name', 'cell', 'address', 'delete'];
 
-  constructor() { }
+  constructor(private fornecedoresService: FornecedoresService) { }
 
   ngOnInit(): void {
+    this.getFornecedores();
+  }
+
+  getFornecedores(): void {
+    this.fornecedoresService.getFornecedores()
+    .subscribe(fornecedores => this.fornecedores = fornecedores);
+  }
+
+  deleteFornecedor(fornecedor: Fornecedor): void {
+    this.fornecedores = this.fornecedores.filter(c => c !== fornecedor)
+    this.fornecedoresService.deleteFornecedor(fornecedor.id).subscribe();
   }
 
 }

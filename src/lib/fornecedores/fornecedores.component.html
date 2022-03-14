@@ -3,22 +3,27 @@
 <!-- coluna id -->
 <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> Id </th>
-    <td mat-cell *matCellDef="let fornecedores"> {{ fornecedores.id }} </td>
+    <td mat-cell *matCellDef="let fornecedor"> {{ fornecedor.id }} </td>
 </ng-container>
 
 <ng-container matColumnDef="name"> 
     <th mat-header-cell *matHeaderCellDef> Nome </th>
-    <td mat-cell *matCellDef="let fornecedores"> {{ fornecedores.name }} </td>
+    <td mat-cell *matCellDef="let fornecedor"> {{ fornecedor.name }} </td>
 </ng-container>
 
 <ng-container matColumnDef="cell">
     <th mat-header-cell *matHeaderCellDef> Contato </th>
-    <td mat-cell *matCellDef="let fornecedores"> {{ fornecedores.cell }} </td>
+    <td mat-cell *matCellDef="let fornecedor"> {{ fornecedor.cell }} </td>
 </ng-container>
 
 <ng-container matColumnDef="address"> 
     <th mat-header-cell *matHeaderCellDef> Endereço </th>
-    <td mat-cell *matCellDef="let fornecedores"> {{ fornecedores.address }} </td>
+    <td mat-cell *matCellDef="let fornecedor"> {{ fornecedor.address }} </td>
+</ng-container>
+
+<ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef> Deletar </th>
+    <td mat-cell *matCellDef="let fornecedor"><button color="warn" mat-mini-fab (click)="deleteFornecedor(fornecedor)"><mat-icon>delete</mat-icon></button></td>
 </ng-container>
 
 <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
