@@ -8,8 +8,8 @@ export class InMemoryDataService {
   createDb() {
 
     const dados = [
-      {id: 111, name: 'zilean', cell: 9999, address: 'rua 22', type: 'cpf' },
-      {id: 112, name: 'renata', cell: 52526665, address: 'rua 15', type: 'cpf' },
+      {id: 111, name: 'Lux', 16988075641, address: 'Av. Mid, 621', type: 'cpf' },
+      {id: 112, name: 'Renata', cell: 1755342869, address: 'Rua Bot, 74', type: 'cpf' },
       {id: 113, name: 'azir',  cell: 55555252, address: 'rua 12', type: 'cpf'},
       {id: 114, name: 'ezreal', cell: 52529999, address: 'rua 22', type: 'cpf'},
       {id: 115, name: 'zyra', cell: 52525984, address: 'rua 22', type: 'cpf' },
