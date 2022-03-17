@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Cliente } from '../clientes.model';
 import { ClientesService } from '../clientes.service';
 import { MatDialogComponent } from '../mat-dialog/mat-dialog.component';
@@ -18,7 +18,8 @@ export class ClientesComponent implements OnInit {
   columnsToDisplay = ['id', 'name', 'cell', 'address', 'delete'];
 
   
-  constructor(private clientesService: ClientesService, public dialog: MatDialog) { }
+  constructor(private clientesService: ClientesService, 
+    ,) { }
 
   ngOnInit(): void {
     this.getClientes();
@@ -30,9 +31,9 @@ export class ClientesComponent implements OnInit {
   } 
 
   confirmDialog(cliente: Cliente): void {
-    const caixaDialogo = this.dialog.open(MatDialogComponent); 
+    const dialogRef = this.dialog.open(MatDialogComponent); 
 
-    caixaDialogo.afterClosed().subscribe((escolha: Boolean) => {
+    dialogRef.afterClosed().subscribe((escolha: Boolean) => {
       if(escolha) {
         this.deleteCliente(cliente);
       }

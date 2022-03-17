@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core'
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Cliente } from '../clientes.model';
 
 
 @Component({
@@ -9,7 +10,10 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class MatDialogComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor 
+  (public dialog: MatDialog) { }
+
+  // confirmDialog();
 
   ngOnInit(): void {
   }

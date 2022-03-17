@@ -1,7 +1,8 @@
-<!-- <button mat-button (click)="confirmDialog()">Confirmar</button>
-<button mat-button (click)=" ">Cancelar</button> -->
-
 <h1 mat-dialog-title>Dialog</h1>
+
 <div mat-dialog-content>Deseja deletar o cliente?</div>
+
 <div mat-dialog-actions>
-</div>    
+    <button mat-button [mat-dialog-close] cdkFocusInitial>Confirmar</button>
+    <button mat-button [mat-dialog-close]>Cancelar</button>
+  </div>
