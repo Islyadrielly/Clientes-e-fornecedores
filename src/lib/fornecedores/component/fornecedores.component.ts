@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Fornecedor } from './fornecedores.model';
-import { FornecedoresService } from './fornecedores.service';
+import { MatDialog } from '@angular/material/dialog';
+import { Fornecedor } from '../fornecedores.model';
+import { FornecedoresService } from '../fornecedores.service';
+import { MatDialogComponent } from '../mat-dialog/mat-dialog.component';
 
 
 @Component({
@@ -14,7 +16,8 @@ export class FornecedoresComponent implements OnInit {
 
   columnsToDisplay = ['id', 'name', 'cell', 'address', 'delete'];
 
-  constructor(private fornecedoresService: FornecedoresService) { }
+  constructor(private fornecedoresService: FornecedoresService,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getFornecedores();
@@ -23,6 +26,16 @@ export class FornecedoresComponent implements OnInit {
   getFornecedores(): void {
     this.fornecedoresService.getFornecedores()
     .subscribe(fornecedores => this.fornecedores = fornecedores);
+  }
+
+  confirmDialog(fornecedor: Fornecedor): void {
+    const dialogRef = this.dialog.open(MatDialogComponent);
+
+    dialogRef.afterClosed().subscribe((escolha: Boolean) => {
+      if(escolha) {
+        this.deleteFornecedor(fornecedor);
+      }
+    })
   }
 
   deleteFornecedor(fornecedor: Fornecedor): void {

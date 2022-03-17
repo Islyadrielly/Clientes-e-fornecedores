@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ClientesModule } from '../lib/clientes/clientes.module';
 import { FornecedoresModule } from 'src/lib/fornecedores/fornecedores.module';
+
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
