@@ -5,14 +5,13 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { MatDialogComponent } from './mat-dialog/mat-dialog.component';
+import { SharedModule } from '../shared/mat-dialog/shared.module';
+
 
 
 @NgModule({
   declarations: [
     ClientesComponent,
-    MatDialogComponent,
 
   ],
   imports: [
@@ -21,7 +20,7 @@ import { MatDialogComponent } from './mat-dialog/mat-dialog.component';
     HttpClientModule,
     MatButtonModule,
     MatIconModule, 
-    MatDialogModule, 
+    SharedModule,
   ],
 
   exports: [

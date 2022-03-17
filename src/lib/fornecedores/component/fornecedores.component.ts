@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Fornecedor } from '../fornecedores.model';
 import { FornecedoresService } from '../fornecedores.service';
-import { MatDialogComponent } from '../mat-dialog/mat-dialog.component';
+import { MatDialogComponent } from '../../shared/mat-dialog/mat-dialog.component';
 
 
 @Component({
