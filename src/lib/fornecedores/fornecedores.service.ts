@@ -12,7 +12,7 @@ export class FornecedoresService extends SharedService<Fornecedor>{
   getPessoa(): Observable<Fornecedor[]> {
     return this.http.get<Fornecedor[]>(this.url)
     .pipe(
-      map(pessoas => pessoas.filter(pessoa => pessoa.cnpj))
+      map(pessoas => pessoas.filter(pessoa => pessoa.cnpj != undefined))
     )
   }
 

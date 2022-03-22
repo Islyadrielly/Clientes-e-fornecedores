@@ -1,7 +1,7 @@
 import { Pessoa } from "../shared/pessoa.model";
 
 export interface Cliente extends Pessoa {
-    cpf: number;
+    cpf: string;
     clienteDesde: string;
     mensalidade: number;
   }

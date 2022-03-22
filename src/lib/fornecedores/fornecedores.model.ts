@@ -1,7 +1,7 @@
 import { Pessoa } from "../shared/pessoa.model";
 
 export interface Fornecedor extends Pessoa {
-    cnpj: number;
+    cnpj: string;
     fornecedorDesde: string;
     diaDePagamento: string;
 }

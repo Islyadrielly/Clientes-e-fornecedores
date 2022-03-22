@@ -15,7 +15,7 @@ export class ClientesComponent implements OnInit {
 
   clientes: Cliente[] = [];
 
-  columnsToDisplay = ['id', 'name', 'cell', 'address', 'delete', 'cpf', 'clienteDesde', 'mensalidade'];
+  columnsToDisplay = ['id', 'name', 'cpf', 'mensalidade', 'cell', 'address', 'clienteDesde', 'delete'];
 
   
   constructor(private clientesService: ClientesService, 
