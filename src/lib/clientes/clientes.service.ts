@@ -13,7 +13,7 @@ export class ClientesService extends SharedService<Cliente> {
   getPessoa(): Observable<Cliente[]> {
     return this.http.get<Cliente[]>(this.url)
     .pipe(
-      map(pessoas => pessoas.filter(pessoa => pessoa.type === 'cpf'))
+      map(pessoas => pessoas.filter(pessoa => pessoa.cpf != undefined))
     )
   }
 

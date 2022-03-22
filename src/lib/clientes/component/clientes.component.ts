@@ -15,7 +15,7 @@ export class ClientesComponent implements OnInit {
 
   clientes: Cliente[] = [];
 
-  columnsToDisplay = ['id', 'name', 'cell', 'address', 'delete'];
+  columnsToDisplay = ['id', 'name', 'cell', 'address', 'delete', 'cpf', 'clienteDesde', 'mensalidade'];
 
   
   constructor(private clientesService: ClientesService, 
@@ -26,7 +26,7 @@ export class ClientesComponent implements OnInit {
   }
   
   getClientes(): void {
-    this.clientesService.getClientes()
+    this.clientesService.getPessoa()
     .subscribe((clientes) => this.clientes = clientes);
   } 
 
@@ -41,7 +41,7 @@ export class ClientesComponent implements OnInit {
   }
   deleteCliente(cliente: Cliente): void {
     this.clientes = this.clientes.filter(c => c !== cliente)
-    this.clientesService.deleteCliente(cliente.id).subscribe();
+    this.clientesService.deletePessoa(cliente.id).subscribe();
   }
 
 }

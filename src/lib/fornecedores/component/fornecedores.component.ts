@@ -24,7 +24,7 @@ export class FornecedoresComponent implements OnInit {
   }
 
   getFornecedores(): void {
-    this.fornecedoresService.getFornecedores()
+    this.fornecedoresService.getPessoa()
     .subscribe(fornecedores => this.fornecedores = fornecedores);
   }
 
@@ -40,7 +40,7 @@ export class FornecedoresComponent implements OnInit {
 
   deleteFornecedor(fornecedor: Fornecedor): void {
     this.fornecedores = this.fornecedores.filter(f => f !== fornecedor)
-    this.fornecedoresService.deleteFornecedor(fornecedor.id).subscribe();
+    this.fornecedoresService.deletePessoa(fornecedor.id).subscribe();
   }
 
 }

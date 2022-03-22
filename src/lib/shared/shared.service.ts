@@ -15,7 +15,7 @@ export abstract class SharedService<T extends Pessoa> {
   //definir metodos como abstract obriga as classes que forem extende-la
   //a definir esses metodos
 
-  abstract getPessoa(type: string): Observable<T[]>
+  abstract getPessoa(id: number): Observable<T[]>
 
   abstract deletePessoa(id: number): Observable<T> 
 
