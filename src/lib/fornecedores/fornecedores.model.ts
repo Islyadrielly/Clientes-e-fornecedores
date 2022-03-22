@@ -1,7 +1,5 @@
-export interface Fornecedor {
-    id: number;
-    name: string;
-    cell: number;
-    address: string;
-    type: string;
+import { Pessoa } from "../shared/pessoa.model";
+
+export interface Fornecedor extends Pessoa {
+    type: "cnpj";
 }

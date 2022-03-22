@@ -1,7 +1,5 @@
-export interface Cliente {
-    id: number;
-    name: string;
-    cell: number;
-    address: string;
-    type: string;
+import { Pessoa } from "../shared/pessoa.model";
+
+export interface Cliente extends Pessoa {
+    type: "cpf";
   }

@@ -5,7 +5,7 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { SharedModule } from '../shared/mat-dialog/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
